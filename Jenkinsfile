@@ -13,7 +13,13 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo "Deplooy stage"
+                echo "Deploy stage"
+            }
+        }
+        stage('Consolidate Results') { 
+            steps {
+                input ("Do you want to consolidate results?")
+                echo "Consolidate Results"
             }
         }
     }
