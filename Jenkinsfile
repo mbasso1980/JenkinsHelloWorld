@@ -1,6 +1,11 @@
 pipeline {
     agent any 
     stages {
+        stage('Static Code Scan') { 
+            steps {
+                echo "Static Code Scan stage"
+            }
+        }
         stage('Build') { 
             steps {
                 echo "Build stage"
@@ -12,15 +17,15 @@ pipeline {
                 echo "Test stage"
             }
         }
+        stage('CM Approval') { 
+            steps {
+                input ("CM Approved?")
+                echo "CM Approval"
+            }
+        }
         stage('Deploy') { 
             steps {
                 echo "Deploy stage"
-            }
-        }
-        stage('Consolidate Results') { 
-            steps {
-                input ("Do you want to consolidate results?")
-                echo "Consolidate Results"
             }
         }
         stage('Email Notification') { 
