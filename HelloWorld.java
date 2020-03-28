@@ -6,6 +6,6 @@ class HelloWorld
     // Prints "Hello, World" to the terminal window. 
     public static void main(String args[]) 
     { 
-        System.out.println("Made some changes"); 
+        System.out.println("Testing out Sourcetree.);
     } 
 } 
