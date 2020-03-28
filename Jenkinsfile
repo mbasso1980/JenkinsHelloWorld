@@ -22,7 +22,7 @@ pipeline {
                 echo "Consolidate Results"
             }
         }
-        stage('Email Nootification') { 
+        stage('Email Notification') { 
             steps {
                 mail bcc: '', body: 'Sample Email Notification', cc: '', from: '', replyTo: '', subject: 'Sample Email Notification Subject', to: 'mbasso@rogers.com'
                 echo "Email Notification"
