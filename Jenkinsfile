@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Build stage"
+                javac HelloWorld.java
             }
         }
         stage('Test') { 
