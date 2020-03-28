@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo "Build stage"
                 sh "javac HelloWorld.java"
+                archiveArtifacts artifacts: '**/target/*.class', fingerprint: true
             }
         }
         stage('Test') { 
