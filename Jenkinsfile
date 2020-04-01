@@ -4,7 +4,8 @@ pipeline {
         stage('Static Code Scan') { 
             steps {
                 echo "Static Code Scan stage"
-                sh "git status"
+                sh "COMMIT=`git rev-parse HEAD`"
+                sh "echo $COMMIT"
             }
         }
         stage('Build') { 
