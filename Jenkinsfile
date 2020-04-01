@@ -1,10 +1,12 @@
 pipeline {
+    environment {
+      COMMIT=`git rev-parse HEAD`
+    }
     agent any 
     stages {
         stage('Static Code Scan') { 
             steps {
                 echo "Static Code Scan stage"
-                sh "COMMIT=`git rev-parse HEAD`"
                 sh "echo $COMMIT"
             }
         }
