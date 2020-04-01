@@ -4,7 +4,7 @@ pipeline {
         stage('Static Code Scan') { 
             steps {
                 echo "Static Code Scan stage"
-                git status
+                sh "git status"
             }
         }
         stage('Build') { 
