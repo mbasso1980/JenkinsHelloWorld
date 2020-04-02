@@ -1,6 +1,6 @@
 pipeline {
     environment {
-      COMMIT=`git rev-parse HEAD`
+      COMMIT="Basso"
     }
     agent any 
     stages {
