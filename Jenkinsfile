@@ -28,6 +28,9 @@ pipeline {
                 echo "CM Approval"
             }
         }
+        when{
+        branch 'master'
+        }
         stage('Deploy') { 
             steps {
                 echo "Deploy stage"
