@@ -12,8 +12,8 @@ pipeline {
             steps {
                 echo "Static Code Scan stage"
                 sh "echo $COMMIT"
-                sh "echo $param.TEST_DB"
-                sh "echo $param.TEST_CT"
+                sh "echo ${params.TEST_DB}"
+                sh "echo ${params.TEST_CT}"
             }
         }
         stage('Build') { 
