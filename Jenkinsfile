@@ -5,7 +5,7 @@ pipeline {
     agent any
     
     parameters {
-        extendedChoice description: 'Select an Artifact to deploy.', multiSelectDelimiter: ',', name: 'ARTIFACT', propertyFile: './artifact_list', propertyKey: 'ARTIFACT', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_SINGLE_SELECT', visibleItemCount: 5
+        extendedChoice description: 'Select an Artifact to deploy.', multiSelectDelimiter: ',', name: 'ARTIFACT', propertyFile: 'artifact_list', propertyKey: 'ARTIFACT', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_SINGLE_SELECT', visibleItemCount: 5
         choice(choices: ['PBatch_001_04172020_CD45gYt', 'PBatch_002_04172020_VB5gYt2', 'PBatch_003_04172020_SDffgdt'], description: 'Select an Artifact to deploy.', name: 'TEST_ART')
         choice(choices: ['N/A', 'QA1', 'QA2', 'QA3', 'TST1', 'TST2'], description: 'Select a Test Database to deploy to.', name: 'TEST_DB')
         choice(choices: ['N/A', 'devel1:/IW/CI/fmerger/', 'devel1:/IW/CI/test/', 'devel1:/IW/CI/pbatch/', 'titan1:/IW/CI/test/'], description: 'Select a Test Codetree to deploy to.', name: 'TEST_CT')           
